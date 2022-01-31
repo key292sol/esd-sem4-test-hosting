@@ -1,0 +1,216 @@
+/* ************** */
+/* Reset Stylings */
+
+:root {
+	--color-primary: black;
+	--color-primary-bg: #eee;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	width: 100%;
+
+	color: var(--color-primary);
+	background-color: var(--color-primary-bg);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+button, input[type=submit] {
+	cursor: pointer;
+}
+
+
+
+/* *************** */
+/* Header Stylings */
+
+header {
+	padding: 0;
+	border-bottom: 3px solid red;
+}
+
+header nav ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	list-style: none;
+
+	margin: 0;
+}
+
+header nav ul li {
+	padding: 1rem;
+	font-size: 1.5rem;
+}
+
+header nav ul li a {
+	position: relative;
+	text-decoration: none;
+	color: var(--color-primary);
+}
+
+header nav ul li a.current {
+	--color-primary: blue;
+	font-weight: bold;
+}
+
+header nav ul li a::after {
+	content: '';
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0%;
+	right: 0;
+
+	background-color: var(--color-primary);
+	width: 0%;
+	height: 3px;
+
+	transition: all 500ms ease;
+}
+
+header nav ul li a:hover::after {
+	width: 100%;
+}
+
+
+
+/* ************* */
+/* Mainsection Stylings */
+#page-title {
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding-top: 1rem;
+}
+
+.main-inner {
+	width: 100%;
+	max-width: 700px;
+
+	margin-top: 2rem;
+
+	display: flex;
+}
+
+section {
+	width: 100%;
+}
+
+
+/* ***************** */
+/* Section1 Stylings */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr:first-child {
+	background-color: turquoise;
+}
+
+th, td {
+	border: 1px solid black;
+	border-left: none;
+	border-right: none;
+
+	padding: 0.5rem;
+
+	text-align: center;
+}
+
+th {
+	text-transform: uppercase;
+	padding: 0.8rem;
+}
+
+td > input {
+	min-width: 5ch;
+	width: 13ch;
+}
+
+table button {
+	padding: 0.2em 1em;
+
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+table button.edit {
+	background-color: greenyellow;
+}
+
+table button.del {
+	background-color: tan;
+}
+
+
+/* ***************** */
+/* Section2 Stylings */
+
+.section2 {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+}
+
+#insert-form {
+	max-width: 450px;
+
+	display: grid;
+	flex-direction: column;
+	grid-template-columns: 1fr 2fr;
+	row-gap: 1em;
+
+	font-size: 1.2em;
+}
+
+#insert-form label {
+	margin-right: 2em;
+}
+
+#insert-form input[type=submit] {
+	grid-column: 1 / -1;
+
+	background-color: #b0b9ee;
+	border: 1px solid blue;
+	border-radius: 10px;
+	padding: 0.4rem;
+
+	font-weight: bold;
+	text-transform: uppercase;
+
+	transition: all 200ms ease;
+}
+
+#insert-form input[type=submit]:hover {
+	background-color: #878fc1;
+}
+
+
+/* ********** */
+/* Extras */
+
+.section2 {
+	display: none;
+}
